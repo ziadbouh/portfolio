@@ -187,7 +187,7 @@ function App() {
                 className="relative z-10 rounded-2xl overflow-hidden"
               >
                 <img
-                  src="/image/IMG_0614.jpg" // Remplacez par le chemin réel de votre image
+                  src="../src/public/image/IMG_0614.jpg" // Remplacez par le chemin réel de votre image
                   alt="Profile"
                   className="w-full rounded-xl shadow-2xl"
                 />
