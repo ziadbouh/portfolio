@@ -24,7 +24,12 @@ function App() {
     restDelta: 0.001
   });
 
- 
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/image/cv ziad développeur web.pdf'; // Chemin réel de votre CV
+    link.download = 'cv ziad développeur web.pdf';
+    link.click();
+  };
 
   return (
     <div ref={scrollRef} className="bg-[#0a0a0a] text-white min-h-screen">
@@ -135,29 +140,30 @@ function App() {
         className="py-20 px-4 bg-gradient-to-b from-transparent to-gray-900/30"
       >
         <div className="max-w-6xl mx-auto">
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center">
-    {[
-      { number: "20+", text: "Projets Réalisés" },
-      { number: "99%", text: "Taux de Satisfaction" }
-    ].map((achievement, index) => (
-      <motion.div
-        key={index}
-        variants={itemVariants}
-        className="text-center col-span-2"
-      >
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          className="p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg"
-        >
-          <motion.h3
-            className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
-          >
-            {achievement.number}
-          </motion.h3>
-          <p className="text-gray-300 mt-2">{achievement.text}</p>
-        </motion.div>
-      </motion.div>
-       
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { number: "1+", text: "Années d'Expérience" },
+              { number: "20+", text: "Projets Réalisés" },
+              { number: "30+", text: "Clients Satisfaits" },
+              { number: "99%", text: "Taux de Satisfaction" }
+            ].map((achievement, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="text-center"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  className="p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg"
+                >
+                  <motion.h3
+                    className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
+                  >
+                    {achievement.number}
+                  </motion.h3>
+                  <p className="text-gray-300 mt-2">{achievement.text}</p>
+                </motion.div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -212,7 +218,14 @@ function App() {
                 Mon approche combine créativité et expertise technique pour donner vie à des
                 projets innovants qui dépassent les attentes.
               </p>
-             
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold"
+                onClick={handleDownloadCV}
+              >
+                Télécharger CV
+              </motion.button>
             </motion.div>
           </div>
         </div>
@@ -227,77 +240,73 @@ function App() {
         className="py-20 px-4 bg-gray-900/50"
       >
         <div className="max-w-4xl mx-auto">
-        <motion.h2
-    variants={itemVariants}
-    className="text-4xl font-bold mb-12 text-center"
-  >
-    Compétences
-  </motion.h2>
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center">
-    <div className="col-span-2">
-      <h3 className="text-2xl font-semibold mb-4 text-center">Frontend</h3>
-      {[
-        { name: "React & Next.js", level: 95 },
-        { name: "Boostrap", level: 80 },
-        { name: "Méthode agile", level: 100 },
-        { name: "JavaScript", level: 85 },
-        { name: "Tailwind CSS", level: 95 },
-        { name: "Figma", level: 60 }
-      ].map((skill) => (
-        <motion.div
-          key={skill.name}
-          variants={itemVariants}
-          whileHover={{ scale: 1.02 }}
-          className="bg-gray-800/30 p-6 rounded-xl backdrop-blur-lg mb-4"
-        >
-          <div className="flex justify-between mb-2">
-            <span className="font-medium">{skill.name}</span>
-            <span>{skill.level}%</span>
-          </div>
-          <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-            <motion.div
-              initial={{ width: 0 }}
-              whileInView={{ width: `${skill.level}%` }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-              className="h-full bg-gradient-to-r from-blue-500 to-purple-600"
-            />
-          </div>
-        </motion.div>
-      ))}
-    </div>
-    <div className="col-span-2">
-      <h3 className="text-2xl font-semibold mb-4 text-center">Backend</h3>
-      {[
-        { name: "Node.js", level: 80 },
-        { name: "Bash", level: 85 },
-        { name: "linux", level: 70 },
-        { name: "Nest.js", level: 75 },
-        { name: "sqlite", level: 70 },
-        { name: "MongoDB", level: 30 },
-        { name: "postres SQL", level: 60 },
-        { name: "express", level: 80 }
-      ].map((skill) => (
-        <motion.div
-          key={skill.name}
-          variants={itemVariants}
-          whileHover={{ scale: 1.02 }}
-          className="bg-gray-800/30 p-6 rounded-xl backdrop-blur-lg mb-4"
-        >
-          <div className="flex justify-between mb-2">
-            <span className="font-medium">{skill.name}</span>
-            <span>{skill.level}%</span>
-          </div>
-          <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-            <motion.div
-              initial={{ width: 0 }}
-              whileInView={{ width: `${skill.level}%` }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-              className="h-full bg-gradient-to-r from-blue-500 to-purple-600"
-            />
-          </div>
-        </motion.div>
+          <motion.h2
+            variants={itemVariants}
+            className="text-4xl font-bold mb-12 text-center"
+          >
+            Compétences
+          </motion.h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">Frontend</h3>
+              {[
+                { name: "React & Next.js", level: 90 },
+                { name: "JavaScript", level: 85 },
+                { name: "Tailwind CSS", level: 95 },
+                { name: "Figma", level: 60 }
+              ].map((skill) => (
+                <motion.div
+                  key={skill.name}
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-gray-800/30 p-6 rounded-xl backdrop-blur-lg mb-4"
+                >
+                  <div className="flex justify-between mb-2">
+                    <span className="font-medium">{skill.name}</span>
+                    <span>{skill.level}%</span>
+                  </div>
+                  <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${skill.level}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.5, ease: "easeOut" }}
+                      className="h-full bg-gradient-to-r from-blue-500 to-purple-600"
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">Backend</h3>
+              {[
+                { name: "Node.js", level: 80 },
+                { name: "Nest.js", level: 75 },
+                { name: "SEO", level: 70 },
+                { name: "Firebase", level: 60 },
+                { name: "Linux", level: 50 }
+
+              ].map((skill) => (
+                <motion.div
+                  key={skill.name}
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-gray-800/30 p-6 rounded-xl backdrop-blur-lg mb-4"
+                >
+                  <div className="flex justify-between mb-2">
+                    <span className="font-medium">{skill.name}</span>
+                    <span>{skill.level}%</span>
+                  </div>
+                  <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${skill.level}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.5, ease: "easeOut" }}
+                      className="h-full bg-gradient-to-r from-blue-500 to-purple-600"
+                    />
+                  </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -317,32 +326,32 @@ function App() {
             variants={itemVariants}
             className="text-4xl font-bold mb-12 text-center"
           >
-           quelque  Projets
+            Projets
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                title: "application de musique en javascript ",
+                title: "Plateforme E-commerce ",
                 description: "Une expérience d'achat premium avec un design épuré et des animations fluides",
-                video: "../src/public/image/Enregistrement de l'écran 2024-10-11 204503.mp4",
-                
-                tags: ["javascript"],
+                video: "/image/Vidéo sans titre ‐ Réalisée avec Clipchamp.mp4",
+                screenshot: "https://path/to/your/screenshot.jpg",
+                tags: ["React", "Node.js", "AWS", "Stripe"],
               },
               {
-                title: "platefome de e-commerce full stack seo",
+                title: "Dashboard Analytics AI",
                 description: "Interface d'analyse prédictive avec visualisation de données en temps réel",
-                video: "../src/public/image/Vidéo sans titre ‐ Réalisée avec Clipchamp.mp4",
-                tags: ["ejs", "postres SQL", "express", "node.js"],
+                video: "/image/Capture d'écran 2024-11-04 201018.png",
+                tags: ["JavaScript", "Machine Learning", "D3.js"],
               },
               {
-                title: "calculatrice en javascript",
-                description: "j'ai fait une calculatrice en javascript",
-                image: "../src/public/image/Capture d'écran 2024-11-04 201018.png", // Chemin corrigé
-                tags: ["JavaScript"],
+                title: "Application Mobile Immersive",
+                description: "Application sociale avec réalité augmentée et expériences interactives",
+                image: "/image/Capture d'écran 2024-11-03 133143.png", // Chemin corrigé
+                tags: ["React Native", "AR Kit", "Firebase"],
               },
               {
                 title: "Système Solaire",
-                video: "../src/public/image/Enregistrement de l'écran 2024-12-27 125529.mp4",
+                video: "/image/Enregistrement de l'écran 2024-12-27 125529.mp4",
                 tags: ["HTML", "CSS"],
               }
             ].map((project, index) => (
@@ -383,7 +392,14 @@ function App() {
                       </span>
                     ))}
                   </div>
-                 
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:underline mt-4 inline-block"
+                  >
+                    Voir le projet
+                  </a>
                 </div>
               </motion.div>
             ))}
