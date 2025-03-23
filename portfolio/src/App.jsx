@@ -187,7 +187,7 @@ function App() {
                 className="relative z-10 rounded-2xl overflow-hidden"
               >
                 <img
-                  src="../src/public/image/IMG_0614.jpg" // Remplacez par le chemin réel de votre image
+                  src="/image/IMG_0614.jpg" // Remplacez par le chemin réel de votre image
                   alt="Profile"
                   className="w-full rounded-xl shadow-2xl"
                 />
@@ -240,6 +240,7 @@ function App() {
                 { name: "React & Next.js", level: 90 },
                 { name: "JavaScript", level: 85 },
                 { name: "Tailwind CSS", level: 95 },
+                { name: "HTML & CSS", level: 100 },
                 { name: "Figma", level: 60 }
               ].map((skill) => (
                 <motion.div
@@ -268,10 +269,14 @@ function App() {
               <h3 className="text-2xl font-semibold mb-4">Backend</h3>
               {[
                 { name: "Node.js", level: 80 },
+                { name: "TypeScript", level: 85 },
+                { name: "PostgreSQL", level: 75 },
+                { name: "MongoDB", level: 75 },
                 { name: "Nest.js", level: 75 },
                 { name: "SEO", level: 70 },
                 { name: "Express.js", level: 60 },
                 { name: "Linux", level: 50 }
+
 
               ].map((skill) => (
                 <motion.div
@@ -318,28 +323,28 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                title: "Plateforme E-commerce ",
+                title: "application de musique  ",
                 description: "Une expérience d'achat premium avec un design épuré et des animations fluides",
-                video: "/image/Vidéo sans titre ‐ Réalisée avec Clipchamp.mp4",
+                video: "/image/Enregistrement de l'écran 2024-10-11 204503.mp4",
               
-                tags: ["React", "Node.js", "AWS", "Stripe"],
+                tags: ["html", "css", "javascript"],
               },
               {
                 title: "systeme solaire",
                 description: "Interface d'analyse prédictive avec visualisation de données en temps réel",
-                video: "/src/public/image/Enregistrement de l'écran 2024-12-27 125529.mp4",
+                video: "/image/Enregistrement de l'écran 2024-12-27 125529.mp4",
                 tags: ["html", "css",],
               },
               {
-                title: "Application Mobile Immersive",
+                title: "site vitrine",
                 description: "Application sociale avec réalité augmentée et expériences interactives",
                 image: "/image/Capture d'écran 2024-11-03 133143.png", // Chemin corrigé
-                tags: ["React Native", "AR Kit", "Firebase"],
+                tags: ["html", "css", "javascript"],
               },
               {
                 title: "Plateforme E-commerce ",
-                video: "/public/image/Vidéo sans titre ‐ Réalisée avec Clipchamp.mp4",
-                tags: ["Javascript","Node.js", "postres SQL", ],
+                video: "/image/Vidéo sans titre ‐ Réalisée avec Clipchamp.mp4",
+                tags: ["Javascript","Node.js", "postres SQL", "express.js"],
               }
             ].map((project, index) => (
               <motion.div
