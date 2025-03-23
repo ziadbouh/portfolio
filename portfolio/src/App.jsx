@@ -24,13 +24,7 @@ function App() {
     restDelta: 0.001
   });
 
-  const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/image/cv ziad développeur web.pdf'; // Chemin réel de votre CV
-    link.download = 'cv ziad développeur web.pdf';
-    link.click();
-  };
-
+  
   return (
     <div ref={scrollRef} className="bg-[#0a0a0a] text-white min-h-screen">
       <motion.div
@@ -142,7 +136,7 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: "1+", text: "Années d'Expérience" },
+              
               { number: "20+", text: "Projets Réalisés" },
               { number: "30+", text: "Clients Satisfaits" },
               { number: "99%", text: "Taux de Satisfaction" }
@@ -218,14 +212,7 @@ function App() {
                 Mon approche combine créativité et expertise technique pour donner vie à des
                 projets innovants qui dépassent les attentes.
               </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold"
-                onClick={handleDownloadCV}
-              >
-                Télécharger CV
-              </motion.button>
+           
             </motion.div>
           </div>
         </div>
@@ -283,7 +270,7 @@ function App() {
                 { name: "Node.js", level: 80 },
                 { name: "Nest.js", level: 75 },
                 { name: "SEO", level: 70 },
-                { name: "Firebase", level: 60 },
+                { name: "Express.js", level: 60 },
                 { name: "Linux", level: 50 }
 
               ].map((skill) => (
@@ -334,14 +321,14 @@ function App() {
                 title: "Plateforme E-commerce ",
                 description: "Une expérience d'achat premium avec un design épuré et des animations fluides",
                 video: "/image/Vidéo sans titre ‐ Réalisée avec Clipchamp.mp4",
-                screenshot: "https://path/to/your/screenshot.jpg",
+              
                 tags: ["React", "Node.js", "AWS", "Stripe"],
               },
               {
-                title: "Dashboard Analytics AI",
+                title: "systeme solaire",
                 description: "Interface d'analyse prédictive avec visualisation de données en temps réel",
-                video: "/image/Capture d'écran 2024-11-04 201018.png",
-                tags: ["JavaScript", "Machine Learning", "D3.js"],
+                video: "/src/public/image/Enregistrement de l'écran 2024-12-27 125529.mp4",
+                tags: ["html", "css",],
               },
               {
                 title: "Application Mobile Immersive",
@@ -350,9 +337,9 @@ function App() {
                 tags: ["React Native", "AR Kit", "Firebase"],
               },
               {
-                title: "Système Solaire",
-                video: "/image/Enregistrement de l'écran 2024-12-27 125529.mp4",
-                tags: ["HTML", "CSS"],
+                title: "Plateforme E-commerce ",
+                video: "/src/public/image/Vidéo sans titre ‐ Réalisée avec Clipchamp.mp4",
+                tags: ["Javascript","Node.js", "postres SQL", ],
               }
             ].map((project, index) => (
               <motion.div
