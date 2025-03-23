@@ -338,7 +338,7 @@ function App() {
               },
               {
                 title: "Plateforme E-commerce ",
-                video: "/src/public/image/Vidéo sans titre ‐ Réalisée avec Clipchamp.mp4",
+                video: "/public/image/Vidéo sans titre ‐ Réalisée avec Clipchamp.mp4",
                 tags: ["Javascript","Node.js", "postres SQL", ],
               }
             ].map((project, index) => (
