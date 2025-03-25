@@ -133,10 +133,9 @@ function App() {
         viewport={{ once: true }}
         className="py-20 px-4 bg-gradient-to-b from-transparent to-gray-900/30"
       >
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-6xl mx-auto flex justify-start">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
             {[
-              
               { number: "20+", text: "Projets Réalisés" },
               { number: "30+", text: "Clients Satisfaits" },
               { number: "99%", text: "Taux de Satisfaction" }
@@ -233,15 +232,18 @@ function App() {
           >
             Compétences
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Frontend</h3>
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold mb-4 text-center md:text-left">Frontend</h3>
               {[
                 { name: "React & Next.js", level: 90 },
                 { name: "JavaScript", level: 85 },
                 { name: "Tailwind CSS", level: 95 },
+                { name: "SEO", level: 70 },
+                { name: "TypeScript", level: 55 },
                 { name: "HTML & CSS", level: 100 },
-                { name: "Figma", level: 60 }
+                
+
               ].map((skill) => (
                 <motion.div
                   key={skill.name}
@@ -265,19 +267,15 @@ function App() {
                 </motion.div>
               ))}
             </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Backend</h3>
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold mb-4 text-center md:text-left">Backend</h3>
               {[
                 { name: "Node.js", level: 80 },
-                { name: "TypeScript", level: 85 },
                 { name: "PostgreSQL", level: 75 },
                 { name: "MongoDB", level: 75 },
                 { name: "Nest.js", level: 75 },
-                { name: "SEO", level: 70 },
                 { name: "Express.js", level: 60 },
                 { name: "Linux", level: 50 }
-
-
               ].map((skill) => (
                 <motion.div
                   key={skill.name}
