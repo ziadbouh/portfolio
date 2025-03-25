@@ -384,14 +384,7 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:underline mt-4 inline-block"
-                  >
-                    Voir le projet
-                  </a>
+                
                 </div>
               </motion.div>
             ))}
