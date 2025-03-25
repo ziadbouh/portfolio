@@ -396,7 +396,7 @@ function App() {
       <motion.section
         variants={containerVariants}
         initial="hidden"
-        whileInView="visible"
+        whileInView="visible" 
         viewport={{ once: true }}
         className="py-20 px-4"
       >
