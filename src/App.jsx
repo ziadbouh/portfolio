@@ -133,8 +133,8 @@ function App() {
         viewport={{ once: true }}
         className="py-20 px-4 bg-gradient-to-b from-transparent to-gray-900/30"
       >
-        <div className="max-w-6xl mx-auto flex justify-start">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
+        <div className="max-w-6xl mx-auto flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 transform -translate-x-10">
             {[
               { number: "20+", text: "Projets Réalisés" },
               { number: "30+", text: "Clients Satisfaits" },
@@ -172,14 +172,14 @@ function App() {
         <div className="max-w-4xl mx-auto">
           <motion.h2
             variants={itemVariants}
-            className="text-4xl font-bold mb-12 text-center"
+            className="text-5xl font-bold mb-16 text-center"
           >
             À propos
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               variants={itemVariants}
-              className="relative group"
+              className="relative group md:order-1"
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -201,17 +201,16 @@ function App() {
             </motion.div>
             <motion.div
               variants={itemVariants}
-              className="space-y-6"
+              className="space-y-8 md:order-2 text-center md:text-left md:pl-12"
             >
-              <p className="text-lg text-gray-300 ">
+              <p className="text-xl text-gray-300 leading-relaxed">
                 Passionné par le développement web , je crée des expériences
                 digitales uniques qui allient performance et esthétique.
               </p>
-              <p className="text-lg text-gray-300">
+              <p className="text-xl text-gray-300 leading-relaxed">
                 Mon approche combine créativité et expertise technique pour donner vie à des
                 projets innovants qui dépassent les attentes.
               </p>
-           
             </motion.div>
           </div>
         </div>
@@ -225,22 +224,22 @@ function App() {
         viewport={{ once: true }}
         className="py-20 px-4 bg-gray-900/50"
       >
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             variants={itemVariants}
-            className="text-4xl font-bold mb-12 text-center"
+            className="text-4xl font-bold mb-12"
           >
             Compétences
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-16 items-start">
+          <div className="grid md:grid-cols-2 gap-16 items-center justify-center">
             <div className="space-y-6">
-              <h3 className="text-2xl font-semibold mb-4 text-center md:text-left">Frontend</h3>
+              <h3 className="text-2xl font-semibold mb-4">Frontend</h3>
               {[
                 { name: "React & Next.js", level: 90 },
                 { name: "JavaScript", level: 85 },
                 { name: "Tailwind CSS", level: 95 },
                 { name: "SEO", level: 70 },
-                { name: "TypeScript", level: 55 },
+                { name: "TypeScript", level: 40 },
                 { name: "HTML & CSS", level: 100 },
                 
 
@@ -268,13 +267,13 @@ function App() {
               ))}
             </div>
             <div className="space-y-6">
-              <h3 className="text-2xl font-semibold mb-4 text-center md:text-left">Backend</h3>
+              <h3 className="text-2xl font-semibold mb-4">Backend</h3>
               {[
                 { name: "Node.js", level: 80 },
                 { name: "PostgreSQL", level: 75 },
-                { name: "MongoDB", level: 75 },
-                { name: "Nest.js", level: 75 },
-                { name: "Express.js", level: 60 },
+                { name: "Strapi", level: 75 },
+                { name: "Nest.js", level: 65 },
+                { name: "Express.js", level: 70 },
                 { name: "Linux", level: 50 }
               ].map((skill) => (
                 <motion.div
