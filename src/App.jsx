@@ -134,10 +134,9 @@ function App() {
         className="py-20 px-4 bg-gradient-to-b from-transparent to-gray-900/30"
       >
         <div className="max-w-6xl mx-auto flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 transform -translate-x-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 w-full max-w-3xl">
             {[
               { number: "20+", text: "Projets Réalisés" },
-              { number: "30+", text: "Clients Satisfaits" },
               { number: "99%", text: "Taux de Satisfaction" }
             ].map((achievement, index) => (
               <motion.div
@@ -147,14 +146,14 @@ function App() {
               >
                 <motion.div
                   whileHover={{ scale: 1.1 }}
-                  className="p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg"
+                  className="p-8 rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg"
                 >
                   <motion.h3
-                    className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
+                    className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
                   >
                     {achievement.number}
                   </motion.h3>
-                  <p className="text-gray-300 mt-2">{achievement.text}</p>
+                  <p className="text-gray-300 mt-4 text-lg">{achievement.text}</p>
                 </motion.div>
               </motion.div>
             ))}
