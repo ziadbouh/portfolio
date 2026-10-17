@@ -40,18 +40,6 @@ function App() {
       >
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(51,65,85,0.3)_0,#000_100%)]" />
-          <motion.div
-            animate={{
-              backgroundPosition: ['0% 0%', '100% 100%'],
-              opacity: [0.3, 0.15]
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              repeatType: "reverse"
-            }}
-            className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa')] bg-cover bg-center"
-          />
         </div>
 
         <motion.div
@@ -175,32 +163,10 @@ function App() {
           >
             À propos
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="max-w-3xl mx-auto">
             <motion.div
               variants={itemVariants}
-              className="relative group md:order-1"
-            >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="relative z-10 rounded-2xl overflow-hidden"
-              >
-                <img
-                  src="/image/IMG_0614.jpg" // Remplacez par le chemin réel de votre image
-                  alt="Profile"
-                  className="w-full rounded-xl shadow-2xl"
-                />
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6"
-                >
-                  <p className="text-white text-sm">développeur freelance </p>
-                </motion.div>
-              </motion.div>
-            </motion.div>
-            <motion.div
-              variants={itemVariants}
-              className="space-y-8 md:order-2 text-center md:text-left md:pl-12"
+              className="space-y-8 text-center"
             >
               <p className="text-xl text-gray-300 leading-relaxed">
                 Passionné par le développement web , je crée des expériences
